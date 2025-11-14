@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body style="text-align:center;font-family:sans-serif;margin-top:40px">
+    <h1>Literki</h1>
+    <button onclick="send('START')">Start</button>
+    <button onclick="send('CORRECT')">Poprawna litera</button>
+
+    <script>
+        function send(type) {
+            const msg = JSON.stringify({ type: type });
+            GameEvents.postMessage(msg);
+        }
+    </script>
+</body>
+
+</html>

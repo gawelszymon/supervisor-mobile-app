@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body style="text-align:center;font-family:sans-serif;margin-top:40px">
+    <h1>Matematyka</h1>
+    <button onclick="send('GAME_START')">Start gry</button>
+    <button onclick="send('POINT')">+1 punkt</button>
+    <button onclick="send('GAME_FINISH')">Koniec</button>
+
+    <script>
+        function send(type) {
+            const msg = JSON.stringify({ type: type });
+            GameEvents.postMessage(msg);
+        }
+    </script>
+</body>
+
+</html>
